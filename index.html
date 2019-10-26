@@ -17,42 +17,11 @@
 				but1.onclick = function(a, b) {
 					a = xlh.value;
 					var val1 = a.replace(/[^A-Za-z0-9]/g, "") //.toUpperCase();   
-					var strcode = touid(val1, 20).toUpperCase();
-					zcm.value = strcode.substr(0, 5) + "-" + strcode.substr(5, 5) + "-" + strcode.substr(10, 5) + "-" + strcode.substr(15, 5);
+					zcm.value = "aaaaaaaaaaaaahahahah"
 					bton2();
 				};
 
-				function touid(_0x12C45, _0x12EFE) {
-					var _0x133CC = _0x12EFE * 2;
-					var _0x13499 = "";
-					var _0x12F27 = 0;
-					var _0x134EB;
-					for(var i = 0; i < _0x12C45.length; i += 1) {
-						_0x134EB = _0x12C45.charCodeAt(i);
-						_0x13499 += _0x134EB;
-						_0x12F27 += _0x134EB;
-					}
-					while(_0x13499.length < _0x133CC) {
-						_0x13499 += "9";
-					}
-					var _0x12CC0 = "924517630247512667542103782496301214568731254932298547266585209078463512487931254784562134589346825176103278421";
-					var _0x13447 = (_0x12CC0.length - _0x133CC) - 1;
-					var _0x1353D = _0x12F27 % _0x13447;
-					var _0x13514 = ((_0x1353D + 11) * (_0x1353D + 13)) % _0x13447;
-					var _0x133F5 = _0x12CC0.substr(_0x1353D, _0x133CC);
-					var _0x1341E = _0x12CC0.substr(_0x13514, _0x133CC);
-					var _0x134C2 = "";
-					for(var i = 0; i < _0x133CC; i += 1) {
-						_0x134C2 += (parseInt(_0x13499.charAt(i), 10) + parseInt(_0x133F5.charAt(i), 10) + parseInt(_0x1341E.charAt(i), 10)).toString(10) % 10;
-					}
-					var _0x12C1C = "";
-					var _0x13470 = 0;
-					while(_0x12C1C.length < _0x12EFE) {
-						_0x12C1C += (parseInt(_0x134C2.substr(_0x13470 * 2, 2), 10) % 36).toString(36);
-						_0x13470++;
-					}
-					return _0x12C1C;
-				};
+				
 
 				function bton2() {
 					zcm.select();

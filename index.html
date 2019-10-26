@@ -1,26 +1,74 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" charset="utf-8">
+<html lang="zh-CN">
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" charset="utf-8">
 		<title>王者修图注册机</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	
-<script>
-function load()
-{
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			//修改随机码  201
+			window.onload = function() {
 				var but1 = document.getElementById("but1");
 				var xlh = document.getElementById("xlh");
 				var zcm = document.getElementById("zcm");
-				zcm.value = "哈哈哈哈哈";
+				but1.onclick = function(a, b) {
+					a = xlh.value;
+					var val1 = a.replace(/[^A-Za-z0-9]/g, "") //.toUpperCase();   
+					var strcode = touid(val1, 20).toUpperCase();
+					zcm.value = strcode.substr(0, 5) + "-" + strcode.substr(5, 5) + "-" + strcode.substr(10, 5) + "-" + strcode.substr(15, 5);
+					bton2();
+				};
 
-				
-}
+				function touid(_0x12C45, _0x12EFE) {
+					var _0x133CC = _0x12EFE * 2;
+					var _0x13499 = "";
+					var _0x12F27 = 0;
+					var _0x134EB;
+					for(var i = 0; i < _0x12C45.length; i += 1) {
+						_0x134EB = _0x12C45.charCodeAt(i);
+						_0x13499 += _0x134EB;
+						_0x12F27 += _0x134EB;
+					}
+					while(_0x13499.length < _0x133CC) {
+						_0x13499 += "9";
+					}
+					var _0x12CC0 = "924517630247512667542103782496301214568731254932298547266585209078463512487931254784562134589346825176103278421";
+					var _0x13447 = (_0x12CC0.length - _0x133CC) - 1;
+					var _0x1353D = _0x12F27 % _0x13447;
+					var _0x13514 = ((_0x1353D + 11) * (_0x1353D + 13)) % _0x13447;
+					var _0x133F5 = _0x12CC0.substr(_0x1353D, _0x133CC);
+					var _0x1341E = _0x12CC0.substr(_0x13514, _0x133CC);
+					var _0x134C2 = "";
+					for(var i = 0; i < _0x133CC; i += 1) {
+						_0x134C2 += (parseInt(_0x13499.charAt(i), 10) + parseInt(_0x133F5.charAt(i), 10) + parseInt(_0x1341E.charAt(i), 10)).toString(10) % 10;
+					}
+					var _0x12C1C = "";
+					var _0x13470 = 0;
+					while(_0x12C1C.length < _0x12EFE) {
+						_0x12C1C += (parseInt(_0x134C2.substr(_0x13470 * 2, 2), 10) % 36).toString(36);
+						_0x13470++;
+					}
+					return _0x12C1C;
+				};
 
-</script>
-</head>
+				function bton2() {
+					zcm.select();
+					zcm.setSelectionRange(0, 9999);
+					document.execCommand("Copy");
+					if(!zcm.value) {
+						zcm.style.backgroundColor = "black";
+					} else {
+						zcm.style.backgroundColor = "yellowgreen";
+					}
 
-<body onload="load()">
-<div class="container">
+				}
+
+			}
+		</script>
+		<div class="container">
 			<div class="row clearfix">
 				<div class="col-md-12 column">
 					<h3 class="text-center">王者修图注册机</h3>
@@ -41,6 +89,6 @@ function load()
 				</div>
 			</div>
 		</div>
-</body>
+	</body>
 
 </html>
